@@ -11010,7 +11010,7 @@ header.masthead .masthead-heading {
 
     .gif-container, .masthead-subheading {
         flex: 1;
-        max-width: 45%; /* Keeps them balanced */
+        max-width: 100%; /* Keeps them balanced */
     }
 }
 
