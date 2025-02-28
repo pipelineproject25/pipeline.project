@@ -10989,7 +10989,7 @@ header.masthead .masthead-heading {
 
 .gif-container img {
     width: 100%;
-    max-width: 400px; /* Control max size */
+    max-width: 900px; /* Control max size */
     height: auto;
 }
 
