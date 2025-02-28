@@ -10971,50 +10971,43 @@ header.masthead .masthead-heading {
 <!-- animation logo-->
 .masthead {
     display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
-    flex-wrap: wrap; /* Ensures responsiveness */
-    gap: 20px;
-    text-align: center; /* Center text */
-    min-height: 100vh; /* Ensures full viewport height */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center the text */
+    min-height: 100vh; /* Full viewport height */
     padding: 20px;
 }
 
 .gif-container {
-    flex: 1;
-    max-width: 50%;
     display: flex;
-    justify-content: center; /* Center the GIF */
+    justify-content: center; /* Center the GIF horizontally */
+    width: 100%;
 }
 
 .gif-container img {
     width: 100%;
-    max-width: 400px; /* Limits the size of GIF */
+    max-width: 400px; /* Adjust as needed */
     height: auto;
 }
 
 .masthead-subheading {
-    flex: 1;
-    max-width: 50%;
-    text-align: center; /* Centers text */
+    max-width: 80%; /* Keeps text readable */
+    text-align: center; /* Ensures text is centered */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Adjustments for large screens */
+@media (min-width: 1024px) {
     .masthead {
-        flex-direction: column; /* Stack GIF & text vertically */
+        flex-direction: row; /* Side-by-side on larger screens */
+        gap: 40px;
     }
 
     .gif-container, .masthead-subheading {
-        max-width: 100%; /* Take full width */
-    }
-
-    .gif-container img {
-        width: 80%; /* Slightly reduce size */
-        max-width: 300px;
+        flex: 1;
+        max-width: 50%; /* Keep both elements equal width */
     }
 }
-
 <!-- end of animation logo-->
 
 @media (min-width: 768px) {
