@@ -10968,6 +10968,7 @@ header.masthead .masthead-heading {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+<!-- animation logo-->
 .gif-container {
     position: absolute;
     top: 0;
@@ -10977,13 +10978,29 @@ header.masthead .masthead-heading {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Prevents overflow issues */
 }
 
 .gif-container img {
-    width: 100%; /* Adjust width */
-    height: auto; /* Keep aspect ratio */
-    object-fit: cover; /* Ensure full coverage */
+    width: 100%; /* Full width on smaller screens */
+    max-width: 900px; /* Prevents it from getting too large */
+    height: auto; /* Maintains aspect ratio */
 }
+
+@media (max-width: 768px) {
+    .gif-container img {
+        width: 80%; /* Shrinks the GIF slightly */
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gif-container img {
+        width: 90%; /* Makes it fit better on very small screens */
+        max-width: 400px;
+    }
+}
+<!-- end of animation logo-->
 
 @media (min-width: 768px) {
   header.masthead {
